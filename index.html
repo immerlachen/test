@@ -1,17 +1,20 @@
 <!--//--><script>
-document.title=
-'URL?HT64#JS64';var $;
-document.write(
-decodeURIComponent(
-escape(atob((location
-.href.split('?')[1]||'')
-.split('#')[0]||''))));
+/* URL?HT64#JS64 */
+function $de(s){
+var d=decodeURIComponent;
+try{s=atob(s);
+s=d(escape(s))}
+catch(e){try{s=d(s)}
+catch(e){}}return s}
+try{document.write(
+$de((location.href
+.split('?')[1]||'')
+.split('#')[0]||''))
+}catch(e){}var $;
 (function $js(){try{
 setTimeout($js,100);
 var l=location.href;
-if($!=l){$=l;eval(
-decodeURIComponent(
-escape(atob(l.split(
-'#')[1]||''))))}
-}catch(e){}})()
+if($!=l){$=l;eval(d(
+l.split('#')[1]||''
+))}}catch(e){}})()
 <!--//--></script>
